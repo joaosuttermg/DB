@@ -1,17 +1,17 @@
-import { Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, TouchableOpacity, StyleSheet,Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 export default function CardAluno({ aluno }) {
     const navigation = useNavigation();
     
     return (
-        <TouchableOpacity
-            onPress={() => navigation.navigate('Detalhes do aluno', { aluno })}
-            style={styles.aluno}   
-        >
-            <Text style={styles.emoji}>{aluno.emoji}</Text>
-            <Text>{aluno.nome}</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Detalhes do aluno", { aluno })}
+        style={styles.aluno}>
+        <Image source={aluno.emoji} />
+        <Text style={styles.emoji}>{aluno.emoji}</Text>
+        <Text>{aluno.nome}</Text>
+      </TouchableOpacity>
     );
 }
 

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, Text, View, Button, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function HelloWorld() {
@@ -6,13 +6,16 @@ export default function HelloWorld() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.hello}>Olá turma linda</Text>
-      <Text style={styles.emoji}>😀</Text>  
+      <Text style={styles.hello}>GOKU TRANSFORMATIONS</Text>
+      <Image
+        style={styles.emoji}
+        source={require("../../img/icons8-son-goku-64.png")}
+      />
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Lista de Alunos')}
+        onPress={() => navigation.navigate("Lista de Alunos")}
       >
-        <Text>Ir para lista de alunos</Text>
+        <Text style={styles.seguirlista}>Ir para lista de Transformações</Text>
       </TouchableOpacity>
     </View>
   );
@@ -36,6 +39,16 @@ const styles = StyleSheet.create({
   button: {
     margin: 10,
     padding: 10,
-    backgroundColor: 'lightblue',
-  }
+    backgroundColor: 'orange',
+    borderRadius: 5,
+    width: '90%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    FontFace: 'Helvetica'
+  },
+  seguirlista: {
+    color: 'white',
+    fontSize: 20,
+  },
+  
 });

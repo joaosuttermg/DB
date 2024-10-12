@@ -1,12 +1,30 @@
-import { View, FlatList } from "react-native";
+import { View, FlatList,  Image } from "react-native";
 import CardAluno from "../components/CardAluno";
 
 // Array com os alunos
 const meusAlunos = [
-    { id: '1', nome: 'Yuri', emoji: '😎', idade: 20, curso: 'Sistemas de Informação', endereco: 'Rua dos Yuri, nº 0', telefone: '(99) 99999-9999' },
-    { id: '2', nome: 'JoãoX', emoji: '😀', idade: 21, curso: 'Engenharia de Software', endereco: 'Rua dos JoãoX, nº 1', telefone: '(88) 88888-8888' },
-    { id: '3', nome: 'Lucas', emoji: '😍', idade: 22, curso: 'Ciência da Computação', endereco: 'Rua dos Lucas, nº 2', telefone: '(77) 77777-7777' },
-    { id: '4', nome: 'Victorrr', emoji: '🤩', idade: 23, curso: 'Análise e Desenvolvimento de Sistemas', endereco: 'Rua dos Victorrr, nº 3', telefone: '(66) 66666-6666' },
+  {
+    id: "1",
+    nome: "Super sayajin 1",
+    emoji: require("../../img/baixados (2).jpg"),
+    descricao:
+      "Goku atingiu o Super Saiyajin 1 ao presenciar a morte de seu amigo Kuririn pelas mãos de Freeza. Essa raiva intensa despertou seu poder latente.",
+  },
+  {
+    id: "2",
+    nome: "Super sayajin 2",
+    emoji: require("../../img/baixados (3).jpg"),
+    descricao:
+      "Goku atingiu o Super Saiyajin 2 durante a batalha contra Cell, ao superar seus limites com um treinamento intenso e ver Gohan em perigo. Isso liberou um poder ainda maior.",
+  },
+  {
+    id: "3",
+    nome: "Super sayajin 3",
+    emoji: require("../../img/baixados (2).jpg"),
+    descricao:
+      "Goku alcançou o Super Saiyajin 3 durante seu treinamento no Outro Mundo, superando limites para enfrentar Majin Buu. Essa forma demanda enorme energia e resistência.",
+  },
+
 ];
 
 export default function Alunos() {
