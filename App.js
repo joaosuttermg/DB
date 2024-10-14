@@ -13,7 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName='Hello World'>
         <Stack.Screen name='Hello World' component={HelloWorld} />
         <Stack.Screen name='Lista de Alunos' component={Alunos} />
-        <Stack.Screen name='Detalhes do aluno' component={AlunoDetalhes} />
+        <Stack.Screen name='Detalhes da transformação' component={AlunoDetalhes} />
       </Stack.Navigator>
     </NavigationContainer>
   );
