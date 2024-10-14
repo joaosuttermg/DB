@@ -1,8 +1,8 @@
 import { View, FlatList,  Image } from "react-native";
-import CardAluno from "../components/CardAluno";
+import Cardtransforms from "../components/Cardtransforms";
 
 // Array com os alunos
-const meusAlunos = [
+const gokuTransforms = [
   {
     id: "1",
     nome: "Super sayajin 1",
@@ -35,7 +35,8 @@ const meusAlunos = [
     id: "5",
     nome: "super sayajin DEUS",
     foto: require("../../img/@revertcash.jpg"),
-    descricao: "Goku atingiu o Super Saiyajin Deus ao realizar um ritual onde cinco Saiyajins de coração puro transferiram seu poder para ele. Isso concedeu a Goku uma nova forma divina com um poder colossal. "
+    descricao:
+      "Goku atingiu o Super Saiyajin Deus ao realizar um ritual onde cinco Saiyajins de coração puro transferiram seu poder para ele. Isso concedeu a Goku uma nova forma divina com um poder colossal. ",
   },
 
   {
@@ -61,14 +62,14 @@ const meusAlunos = [
   },
 ];
 
-export default function Alunos() {
+export default function Transforms() {
     return (
         <View>
             <FlatList
-                data={meusAlunos}
+                data={gokuTransforms}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
-                    <CardAluno aluno={item}/>
+                    <Cardtransforms transforms={item}/>
                 )}
             />
         </View>

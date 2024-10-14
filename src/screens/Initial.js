@@ -1,7 +1,7 @@
 import { StyleSheet, Image, Text, View, Button, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export default function HelloWorld() {
+export default function Initial() {
   const navigation = useNavigation(); // Adicione essa linha
 
   return (
@@ -13,7 +13,7 @@ export default function HelloWorld() {
       />
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Lista de Alunos")}
+        onPress={() => navigation.navigate("Lista de transformações")}
       >
         <Text style={styles.seguirlista}>Ir para lista de Transformações</Text>
       </TouchableOpacity>

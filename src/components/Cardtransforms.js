@@ -1,23 +1,23 @@
 import { Text, TouchableOpacity, StyleSheet,Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function CardAluno({ aluno }) {
+export default function Cardtransforms({ transforms }) {
     const navigation = useNavigation();
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("Detalhes da transformação", { aluno })}
-      style={styles.aluno}
+      onPress={() => navigation.navigate("Detalhes da transformação", { transforms })}
+      style={styles.transforms}
     >
-      <Image source={aluno.foto} style={styles.image} />
-      <Text style={styles.foto}>{aluno.foto}</Text>
-      <Text>{aluno.nome}</Text>
+      <Image source={transforms.foto} style={styles.image} />
+      <Text style={styles.foto}>{transforms.foto}</Text>
+      <Text>{transforms.nome}</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  aluno: {
+  transforms: {
     flexDirection: "row",
     marginHorizontal: 20,
     marginVertical: 10,

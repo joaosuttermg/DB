@@ -2,15 +2,15 @@ import { Text, View, Image,  StyleSheet } from 'react-native';
 import { useRoute } from "@react-navigation/native";
 
 
-export default function AlunoDetalhes() {
+export default function TransformsDetalhes() {
     const route = useRoute();
-    const { aluno } = route.params || {};
+    const { transforms } = route.params || {};
     return (
       <View style={styles.caixa}>
         <Text style={styles.titulo}>Detalhes da transformação</Text>
-        <Image source={aluno.foto} style={styles.image} />
-        <Text style={styles.nome}>Nome: {aluno.nome}</Text>
-        <Text style={styles.descricao}>descrição: {aluno.descricao}</Text>
+        <Image source={transforms.foto} style={styles.image} />
+        <Text style={styles.nome}>Nome: {transforms.nome}</Text>
+        <Text style={styles.descricao}>descrição: {transforms.descricao}</Text>
       </View>
     );
 }
